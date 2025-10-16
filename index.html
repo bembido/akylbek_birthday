@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ақылбектің туған күніне шақыру</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Ақылбектің туған күніне шақыру. Күні: 18 қазан 2025, Уақыты: 18:00, Орны: \"Арай\" мейрамханасы, Аққыстау.">
+</head>
+<body>
+    <!-- Music Button -->
+    <button id="musicButton" class="music-button" title="Музыканы қосу / өшіру">
+        🎵
+    </button>
+    <audio id="birthdayMusic" loop autoplay>
+        <source src="birthday-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Decorative Elements -->
+    <div class="decorative-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Floating Decorations -->
+        <div class="floating-decoration deco-1">✨</div>
+        <div class="floating-decoration deco-2">🎈</div>
+        <div class="floating-decoration deco-3">⭐</div>
+        <div class="floating-decoration deco-4">🎊</div>
+        <div class="floating-decoration deco-5">💫</div>
+        <div class="floating-decoration deco-6">🎉</div>
+        
+        <div class="hero-content">
+            <div class="hero-emoji"><img src="birthday_image.jpg" alt=""></div>
+            <h1 class="hero-title">Құрметті қонақтар!</h1>
+            <p class="hero-subtitle">Біз сіздерді шын жүректен шақырамыз</p>
+            <h2 class="hero-name">Ақылбектің 35 жастық</h2>
+            <p class="hero-description">туған күніне арналған мерекелік кешке!</p>
+            <p class="hero-message">Бұл ерекше күнді бірге тойлайық, қуаныш пен күлкі бөлісейік!</p>
+        </div>
+        
+        <!-- Decorative Lines -->
+        <div class="hero-line line-left"></div>
+        <div class="hero-line line-right"></div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="section countdown-wrapper">
+        <div class="container">
+            <div class="section-decoration">
+                <span class="deco-star">⭐</span>
+                <span class="deco-line"></span>
+                <span class="deco-star">⭐</span>
+            </div>
+            <h3 class="section-label">Мерекеге дейін қалды</h3>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">00</span>
+                    <span class="countdown-label">күн</span>
+                </div>
+                <span class="countdown-separator">:</span>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label">сағат</span>
+                </div>
+                <span class="countdown-separator">:</span>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label">минут</span>
+                </div>
+                <span class="countdown-separator">:</span>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label">секунд</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="section details-wrapper">
+        <div class="container">
+            <div class="section-decoration">
+                <span class="deco-star">✨</span>
+                <span class="deco-line"></span>
+                <span class="deco-star">✨</span>
+            </div>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-icon">📅</div>
+                    <div class="detail-text">18 қазан 2025 жыл</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">⏰</div>
+                    <div class="detail-text">18:00-ден бастап</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">📍</div>
+                    <div class="detail-text">
+                        "Арай" караоке<br>Аққыстау ауылы
+                       
+                    </div>
+                </div>
+                <!-- <div class="detail-item">
+                    <div class="detail-icon">🎭</div>
+                    <div class="detail-text">Дресс-код: Еркін стиль</div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="section rsvp-wrapper">
+        <div class="container-narrow">
+            <div class="section-decoration">
+                <span class="deco-star">💎</span>
+                <span class="deco-line"></span>
+                <span class="deco-star">💎</span>
+            </div>
+            <h3 class="section-label">Қатысуыңызды растаңыз</h3>
+            <form id="rsvpForm" name="submit-to-google-sheet" class="rsvp-form">
+                <input 
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    class="form-input" 
+                    placeholder="Атыңызды енгізіңіз" 
+                    required
+                >
+                
+                <div class="response-grid">
+                    <label class="response-card">
+                        <input type="radio" name="response" value="Келемін" required>
+                        <div class="response-content">
+                            <span class="response-emoji">✅</span>
+                            <span class="response-text">Келемін</span>
+                        </div>
+                    </label>
+                    <label class="response-card">
+                        <input type="radio" name="response" value="Келе алмаймын" required>
+                        <div class="response-content">
+                            <span class="response-emoji">❌</span>
+                            <span class="response-text">Келе алмаймын</span>
+                        </div>
+                    </label>
+                    <label class="response-card">
+                        <input type="radio" name="response" value="Ойланамын" required>
+                        <div class="response-content">
+                            <span class="response-emoji">🤔</span>
+                            <span class="response-text">Ойланамын</span>
+                        </div>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    Жауапты жіберу
+                </button>
+            </form>
+            
+            <div id="successMessage" class="success-box">
+                <div class="success-emoji">✅</div>
+                <p class="success-text">Рақмет! Жауабыңыз қабылданды!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Сізді мерекеде көруге қуаныштымыз! 🥳</p>
+            <p class="footer-contact">Сұрақтар бойынша: <a href="tel:+1234567890">+7 (702) 234 5320</a></p>
+        </div>
+    </footer>
+
+    <!-- Confetti Container -->
+    <div class="confetti"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
