@@ -1,7 +1,7 @@
 // Таймер обратного отсчета
 function updateCountdown() {
     // Дата праздника: 18 октября 2025, 18:00
-    const birthdayDate = new Date(2025, 9, 18, 18, 0, 0); // Месяц: 9 = октябрь (0-indexed)
+    const birthdayDate = new Date(2025, 9, 19, 20, 0, 0); // Месяц: 9 = октябрь (0-indexed)
     const now = new Date();
     const difference = birthdayDate - now;
 
